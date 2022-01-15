@@ -53,7 +53,7 @@ contract B is A(1) {
 
 使用`truffle init`在`fallout`文件夹下初始化项目，然后编辑truffle配置文件，设置部署到区块链时选择的provider：
 
-```json
+```
     networks: {
         development: {
             network_id: "5777",
