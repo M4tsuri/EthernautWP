@@ -1,4 +1,8 @@
 */**/build
 **/node_modules
 **/.secret
+**/.dev_secret
 **/.api
+**/.privkey
+**/yarn-error.log
+playground/.next
