@@ -1,5 +1,5 @@
 {
-    "name": "fallout",
+    "name": "attack",
     "private": true,
     "version": "0.0.1",
     "main": "index.js",
@@ -11,6 +11,7 @@
     "dependencies": {
         "@openzeppelin/contracts": "^4.4.2",
         "@truffle/hdwallet-provider": "^2.0.0",
+        "original-require": "^1.0.1",
         "truffle": "^5.4.29"
     }
 }

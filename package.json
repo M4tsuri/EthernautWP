@@ -1,0 +1,8 @@
+{
+    "private": true,
+    "workspaces": [
+        "2-fallout/fallout",
+        "2-fallout/play",
+        "3-coin-flip/attack"
+    ]
+}
