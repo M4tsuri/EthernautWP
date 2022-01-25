@@ -1,11 +1,11 @@
 {
-    "name": "2-fallout_play",
+    "name": "play",
     "private": true,
     "version": "0.0.1",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "generate-types": "typechain --target=ethers-v5 '../fallout/build/contracts/*.json'",
+        "generate-types": "rm -rf types && typechain --target=ethers-v5 '../contracts/build/contracts/*.json'",
         "postinstall": "yarn generate-types",
         "start": "ts-node ./src/index.ts",
         "typecheck": "tsc --noEmit"

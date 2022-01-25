@@ -1,5 +1,5 @@
 {
-    "name": "2-fallout_contracts",
+    "name": "contracts",
     "private": true,
     "version": "0.0.1",
     "main": "index.js",
