@@ -8,7 +8,6 @@ import {
   CallOverrides,
   ContractTransaction,
   Overrides,
-  PayableOverrides,
   PopulatedTransaction,
   Signer,
   utils,
@@ -20,48 +19,12 @@ import { TypedEventFilter, TypedEvent, TypedListener, OnEvent } from "./common";
 export interface AttackInterface extends utils.Interface {
   contractName: "Attack";
   functions: {
-    "owner()": FunctionFragment;
-    "Fal1out()": FunctionFragment;
-    "getOwner()": FunctionFragment;
-    "allocate()": FunctionFragment;
-    "sendAllocation(address)": FunctionFragment;
-    "collectAllocations()": FunctionFragment;
-    "allocatorBalance(address)": FunctionFragment;
+    "flip()": FunctionFragment;
   };
 
-  encodeFunctionData(functionFragment: "owner", values?: undefined): string;
-  encodeFunctionData(functionFragment: "Fal1out", values?: undefined): string;
-  encodeFunctionData(functionFragment: "getOwner", values?: undefined): string;
-  encodeFunctionData(functionFragment: "allocate", values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: "sendAllocation",
-    values: [string]
-  ): string;
-  encodeFunctionData(
-    functionFragment: "collectAllocations",
-    values?: undefined
-  ): string;
-  encodeFunctionData(
-    functionFragment: "allocatorBalance",
-    values: [string]
-  ): string;
+  encodeFunctionData(functionFragment: "flip", values?: undefined): string;
 
-  decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "Fal1out", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "getOwner", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "allocate", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "sendAllocation",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: "collectAllocations",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: "allocatorBalance",
-    data: BytesLike
-  ): Result;
+  decodeFunctionResult(functionFragment: "flip", data: BytesLike): Result;
 
   events: {};
 }
@@ -94,133 +57,30 @@ export interface Attack extends BaseContract {
   removeListener: OnEvent<this>;
 
   functions: {
-    owner(overrides?: CallOverrides): Promise<[string]>;
-
-    Fal1out(
-      overrides?: PayableOverrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    getOwner(overrides?: CallOverrides): Promise<[string]>;
-
-    allocate(
-      overrides?: PayableOverrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    sendAllocation(
-      allocator: string,
+    flip(
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
-
-    collectAllocations(
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    allocatorBalance(
-      allocator: string,
-      overrides?: CallOverrides
-    ): Promise<[BigNumber]>;
   };
 
-  owner(overrides?: CallOverrides): Promise<string>;
-
-  Fal1out(
-    overrides?: PayableOverrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  getOwner(overrides?: CallOverrides): Promise<string>;
-
-  allocate(
-    overrides?: PayableOverrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  sendAllocation(
-    allocator: string,
+  flip(
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
-
-  collectAllocations(
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  allocatorBalance(
-    allocator: string,
-    overrides?: CallOverrides
-  ): Promise<BigNumber>;
 
   callStatic: {
-    owner(overrides?: CallOverrides): Promise<string>;
-
-    Fal1out(overrides?: CallOverrides): Promise<void>;
-
-    getOwner(overrides?: CallOverrides): Promise<string>;
-
-    allocate(overrides?: CallOverrides): Promise<void>;
-
-    sendAllocation(allocator: string, overrides?: CallOverrides): Promise<void>;
-
-    collectAllocations(overrides?: CallOverrides): Promise<void>;
-
-    allocatorBalance(
-      allocator: string,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
+    flip(overrides?: CallOverrides): Promise<boolean>;
   };
 
   filters: {};
 
   estimateGas: {
-    owner(overrides?: CallOverrides): Promise<BigNumber>;
-
-    Fal1out(
-      overrides?: PayableOverrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    getOwner(overrides?: CallOverrides): Promise<BigNumber>;
-
-    allocate(
-      overrides?: PayableOverrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    sendAllocation(
-      allocator: string,
+    flip(
       overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    collectAllocations(
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    allocatorBalance(
-      allocator: string,
-      overrides?: CallOverrides
     ): Promise<BigNumber>;
   };
 
   populateTransaction: {
-    owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    Fal1out(
-      overrides?: PayableOverrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    getOwner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    allocate(
-      overrides?: PayableOverrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    sendAllocation(
-      allocator: string,
+    flip(
       overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    collectAllocations(
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    allocatorBalance(
-      allocator: string,
-      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
   };
 }

