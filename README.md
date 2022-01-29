@@ -10,5 +10,6 @@
 - [x] 2. Fallout
 - [x] 3. Coin Flip
 - [x] 4. Telephone
-- [ ] 5. Token
+- [x] 5. Token
+- [ ] 
 
