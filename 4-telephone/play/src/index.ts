@@ -1,11 +1,13 @@
-import { JsonRpcProvider } from '@ethersproject/providers';
+import { JsonRpcProvider, getDefaultProvider } from '@ethersproject/providers';
 import { Wallet, utils } from 'ethers';
+import { readFileSync } from 'fs-extra';
+import path from 'path/posix';
 
-// import {  } from '../types/ethers-contracts';
+import { Attack__factory } from '../types/ethers-contracts';
 
-const provider = new JsonRpcProvider("HTTP://127.0.0.1:8545");
-
-const testPrivKey = "";
+const provider = getDefaultProvider("rinkeby");
+const testPrivKey = readFileSync(path.resolve(__dirname, "./../../../.privkey")).toString().trim();
+const phone = "0xC498e98B6ED4fF04c3B850714Bc4b1D4EcB9de63"
 
 function toWei(eth: number) {
   return utils.parseEther(eth.toString())
@@ -13,7 +15,13 @@ function toWei(eth: number) {
 
 async function main() {
   let alice = new Wallet(testPrivKey);
-  alice.connect(provider);
+  alice = alice.connect(provider);
+
+  const factory = new Attack__factory(alice);
+  factory.deploy()
+    .then(attack => {
+      attack.attack(phone)
+    })
 
 }
 
