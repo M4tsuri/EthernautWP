@@ -9,5 +9,6 @@
 - [x] 1. Fallback
 - [x] 2. Fallout
 - [x] 3. Coin Flip
-- [ ] 4. Telephone
+- [x] 4. Telephone
+- [ ] 5. Token
 

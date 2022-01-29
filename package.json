@@ -6,7 +6,9 @@
     "3-coin-flip/coinflip",
     "3-coin-flip/play",
     "4-telephone/contracts",
-    "4-telephone/play"
+    "4-telephone/play",
+    "5-token/contracts",
+    "5-token/play"
   ],
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
