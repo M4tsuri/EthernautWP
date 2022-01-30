@@ -11,5 +11,5 @@
 - [x] 3. Coin Flip
 - [x] 4. Telephone
 - [x] 5. Token
-- [ ] 
+- [ ] 6. Delegation
 

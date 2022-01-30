@@ -3,12 +3,12 @@ import { Wallet, utils } from 'ethers';
 import { readFileSync } from 'fs-extra';
 import path from 'path/posix';
 
-// import {  } from '../types/ethers-contracts';
+import { Delegation__factory, Delegate, Delegate__factory } from '../types/ethers-contracts';
 
-// const provider = getDefaultProvider("HTTP://127.0.0.1:8545");
+// const provider = new JsonRpcProvider("HTTP://127.0.0.1:8545");
+const addr = "0x45F286c595E4D32Eea825F483d02EDc82DBf775f"
 const provider = getDefaultProvider("rinkeby");
 const testPrivKey = readFileSync(path.resolve(__dirname, "./../../../.privkey")).toString().trim();
-// const testPrivKey = "";
 
 function toWei(eth: number) {
   return utils.parseEther(eth.toString())
@@ -17,6 +17,11 @@ function toWei(eth: number) {
 async function main() {
   let alice = new Wallet(testPrivKey);
   alice.connect(provider);
+  const inter = Delegate__factory.createInterface();
+  const calldata = inter.encodeFunctionData("pwn")
+  
+
+  
 
 }
 
