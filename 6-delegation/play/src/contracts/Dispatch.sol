@@ -8,19 +8,12 @@ contract Dispatch {
       counter += 1;
   }
 
-  function p2() public {
-      counter += 2;
+  function p2(uint256 a, uint256 b) public {
+      counter += a * b;
   }
 
-  function p3() public {
-      counter += 3;
-  }
-
-  function p4() public {
-      counter += 4;
-  }
-
-  function p5() public {
+  function p5() public returns (uint256) {
       counter += 5;
+      return counter;
   }
 }

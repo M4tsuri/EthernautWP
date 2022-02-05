@@ -1,0 +1,11 @@
+{
+  "name": "7-force_contracts",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "truffle compile",
+    "migrate": "truffle migrate"
+  }
+}
