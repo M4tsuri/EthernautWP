@@ -1,0 +1,13 @@
+{
+  "name": "8-vault_play",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "generate-types": "rm -rf types && typechain --target=ethers-v5 '../contracts/build/contracts/*.json'",
+    "postinstall": "yarn generate-types",
+    "start": "ts-node ./src/index.ts",
+    "typecheck": "tsc --noEmit"
+  }
+}
