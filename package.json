@@ -1,31 +1,31 @@
 {
-  "private": true,
-  "workspaces": [
-    "2-fallout/fallout",
-    "2-fallout/play",
-    "3-coin-flip/coinflip",
-    "3-coin-flip/play",
-    "4-telephone/contracts",
-    "4-telephone/play",
-    "6-delegation/contracts",
-    "6-delegation/play",
-    "7-force/contracts",
-    "7-force/play"
-  ],
-  "devDependencies": {
-    "@types/fs-extra": "^9.0.13",
-    "ts-node": "^10.4.0",
-    "typescript": "4.5.5"
-  },
-  "dependencies": {
-    "@typechain/ethers-v5": "^9.0.0",
-    "@types/bn.js": "^5.1.0",
-    "@types/node": "^17.0.12",
-    "ethers": "^5.5.3",
-    "typechain": "^7.0.0",
-    "@openzeppelin/contracts": "^4.4.2",
-    "@truffle/hdwallet-provider": "^2.0.1",
-    "original-require": "^1.0.1",
-    "truffle": "^5.4.30"
-  }
+    "private": true,
+    "workspaces": [
+        "2-fallout/fallout",
+        "2-fallout/play",
+        "3-coin-flip/coinflip",
+        "3-coin-flip/play",
+        "4-telephone/contracts",
+        "4-telephone/play",
+        "6-delegation/contracts",
+        "6-delegation/play",
+        "7-force/play"
+    ],
+    "devDependencies": {
+        "@types/fs-extra": "^9.0.13",
+        "ts-node": "^10.4.0",
+        "typescript": "4.5.5"
+    },
+    "dependencies": {
+        "@ethersproject/asm": "^5.5.0",
+        "@openzeppelin/contracts": "^4.4.2",
+        "@truffle/hdwallet-provider": "^2.0.1",
+        "@typechain/ethers-v5": "^9.0.0",
+        "@types/bn.js": "^5.1.0",
+        "@types/node": "^17.0.12",
+        "ethers": "^5.5.3",
+        "original-require": "^1.0.1",
+        "truffle": "^5.4.30",
+        "typechain": "^7.0.0"
+    }
 }

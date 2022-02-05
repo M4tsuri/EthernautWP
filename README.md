@@ -12,5 +12,6 @@
 - [x] 4. Telephone
 - [x] 5. Token
 - [x] 6. Delegation
-- [ ] 7. Force
+- [x] 7. Force
+- [ ] 
 
