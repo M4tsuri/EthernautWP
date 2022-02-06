@@ -15,7 +15,9 @@
     "9-king/contracts",
     "9-king/play",
     "10-Re-entrancy/contracts",
-    "10-Re-entrancy/play"
+    "10-Re-entrancy/play",
+    "11-elevator/contracts",
+    "11-elevator/play"
   ],
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",

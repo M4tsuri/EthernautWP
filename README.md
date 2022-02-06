@@ -15,6 +15,8 @@
 - [x] 7. Force
 - [x] 8. Vault
 - [x] 9. King
+- [x] 10. Re-entrancy
+- [ ] 11. Elevator
 
 ### 捐赠
 
