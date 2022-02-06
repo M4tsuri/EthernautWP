@@ -21,7 +21,9 @@
     "12-privacy/contracts",
     "12-privacy/play",
     "13-gatekeeper1/contracts",
-    "13-gatekeeper1/play"
+    "13-gatekeeper1/play",
+    "14-gatekeeper2/contracts",
+    "14-gatekeeper2/play"
   ],
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
