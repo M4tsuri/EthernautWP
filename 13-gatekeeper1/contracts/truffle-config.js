@@ -38,7 +38,7 @@ module.exports = {
 
     networks: {
         development: {
-            network_id: "5777",
+            network_id: "4",
             provider: () => {
                 return new HDWalletProvider(dev_mnemonic, "http://localhost:8545")
             }

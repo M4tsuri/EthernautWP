@@ -5,14 +5,9 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "truffle",
+            "type": "solidity",
             "request": "launch",
-            "name": "Debug Transaction with Truffle",
-            "stopOnEntry": false,
-            "txHash": "0x",
-            "files": [],
-            "workingDirectory": "${workspaceFolder}",
-            "providerUrl": "http://127.0.0.1:8545"
-        }
+            "name": "Debug Solidity (via contract entry point)"
+        },
     ]
 }
