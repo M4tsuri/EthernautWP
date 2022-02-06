@@ -13,5 +13,5 @@
 - [x] 5. Token
 - [x] 6. Delegation
 - [x] 7. Force
-- [ ] 8. Vault
+- [x] 8. Vault
 

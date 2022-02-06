@@ -28,6 +28,8 @@
     "ethers": "^5.5.3",
     "original-require": "^1.0.1",
     "truffle": "^5.4.30",
-    "typechain": "^7.0.0"
+    "typechain": "^7.0.0",
+    "web3": "^1.7.0",
+    "web3-utils": "^1.7.0"
   }
 }

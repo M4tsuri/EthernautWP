@@ -6,7 +6,6 @@
     "license": "MIT",
     "scripts": {
         "generate-types": "rm -rf types && typechain --target=ethers-v5 '../contracts/build/contracts/*.json'",
-        "postinstall": "yarn generate-types",
         "start": "ts-node ./src/index.ts",
         "typecheck": "tsc --noEmit"
     }
