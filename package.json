@@ -11,7 +11,9 @@
     "6-delegation/play",
     "7-force/play",
     "8-vault/contracts",
-    "8-vault/play"
+    "8-vault/play",
+    "9-king/contracts",
+    "9-king/play"
   ],
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",

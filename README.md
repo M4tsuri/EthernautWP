@@ -14,4 +14,5 @@
 - [x] 6. Delegation
 - [x] 7. Force
 - [x] 8. Vault
+- [x] 9. King
 
