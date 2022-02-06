@@ -17,7 +17,7 @@
 - [x] 9. King
 - [x] 10. Re-entrancy
 - [x] 11. Elevator
-- [ ] 12. Privacy
+- [x] 12. Privacy
 
 ### 捐赠
 
