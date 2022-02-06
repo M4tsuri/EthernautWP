@@ -18,6 +18,7 @@
 - [x] 10. Re-entrancy
 - [x] 11. Elevator
 - [x] 12. Privacy
+- [ ] 13. Gatekeeper One
 
 ### 捐赠
 

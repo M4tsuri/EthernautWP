@@ -1,0 +1,12 @@
+{
+  "name": "13-gatekeeper1_play",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "generate-types": "rm -rf types && typechain --target=ethers-v5 '../contracts/build/contracts/*.json'",
+    "start": "ts-node ./src/index.ts",
+    "typecheck": "tsc --noEmit"
+  }
+}
