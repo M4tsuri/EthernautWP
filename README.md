@@ -16,7 +16,8 @@
 - [x] 8. Vault
 - [x] 9. King
 - [x] 10. Re-entrancy
-- [ ] 11. Elevator
+- [x] 11. Elevator
+- [ ] 12. Privacy
 
 ### 捐赠
 

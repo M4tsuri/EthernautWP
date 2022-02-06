@@ -17,7 +17,9 @@
     "10-Re-entrancy/contracts",
     "10-Re-entrancy/play",
     "11-elevator/contracts",
-    "11-elevator/play"
+    "11-elevator/play",
+    "12-privacy/contracts",
+    "12-privacy/play"
   ],
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
