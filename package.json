@@ -25,7 +25,9 @@
     "14-gatekeeper2/contracts",
     "14-gatekeeper2/play",
     "15-naught-coin/contracts",
-    "15-naught-coin/play"
+    "15-naught-coin/play",
+    "16-preservation/contracts",
+    "16-preservation/play"
   ],
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",

@@ -20,7 +20,8 @@
 - [x] 12. Privacy
 - [x] 13. Gatekeeper One
 - [x] 14. Gatekeeper Two
-- [ ] 15. Naught Coin
+- [x] 15. Naught Coin
+- [ ] 16. Preservation
 
 ### 捐赠
 
