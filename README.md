@@ -23,7 +23,7 @@
 - [x] 15. [Naught Coin](./15-naught-coin)
 - [x] 16. [Preservation](./16-preservation)
 - [x] 17. [Recovery](./17-recovery)
-- [ ] 18. [MagicNumber](./18-magicnumber)
+- [x] 18. [MagicNumber](./18-magicnumber)
 
 ### 捐赠
 
