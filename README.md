@@ -5,7 +5,7 @@
 
 ### 完成列表
 
-- [x] 0. Hello
+- [x] 0. [Hello](./0-hello)
 - [x] 1. Fallback
 - [x] 2. Fallout
 - [x] 3. Coin Flip
