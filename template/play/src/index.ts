@@ -5,7 +5,7 @@ import path from 'path/posix';
 
 // import {  } from '../types/ethers-contracts';
 
-// const provider = getDefaultProvider("HTTP://127.0.0.1:8545");
+// const provider = getDefaultProvider("http://127.0.0.1:8545");
 const provider = getDefaultProvider("rinkeby");
 const testPrivKey = readFileSync(path.resolve(__dirname, "./../../../.privkey")).toString().trim();
 // const testPrivKey = "";

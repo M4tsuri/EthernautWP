@@ -21,7 +21,7 @@
 - [x] 13. [Gatekeeper One](./13-gatekeeper1)
 - [x] 14. [Gatekeeper Two](./14-gatekeeper2)
 - [x] 15. [Naught Coin](./15-naught-coin)
-- [ ] 16. [Preservation](./16-preservation)
+- [x] 16. [Preservation](./16-preservation)
 
 ### 捐赠
 
