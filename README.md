@@ -24,6 +24,7 @@
 - [x] 16. [Preservation](./16-preservation)
 - [x] 17. [Recovery](./17-recovery)
 - [x] 18. [MagicNumber](./18-magicnumber)
+- [ ] 19. [Alien Codex](./19-aliencodex)
 
 ### 捐赠
 

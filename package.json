@@ -31,7 +31,9 @@
     "17-recovery/contracts",
     "17-recovery/play",
     "18-magicnumber/contracts",
-    "18-magicnumber/play"
+    "18-magicnumber/play",
+    "19-aliencodex/contracts",
+    "19-aliencodex/play"
   ],
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
