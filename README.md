@@ -19,7 +19,8 @@
 - [x] 11. Elevator
 - [x] 12. Privacy
 - [x] 13. Gatekeeper One
-- [ ] 14. Gatekeeper Two
+- [x] 14. Gatekeeper Two
+- [ ] 15. Naught Coin
 
 ### 捐赠
 
