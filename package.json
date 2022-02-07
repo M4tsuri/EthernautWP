@@ -27,7 +27,9 @@
     "15-naught-coin/contracts",
     "15-naught-coin/play",
     "16-preservation/contracts",
-    "16-preservation/play"
+    "16-preservation/play",
+    "17-recovery/contracts",
+    "17-recovery/play"
   ],
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
