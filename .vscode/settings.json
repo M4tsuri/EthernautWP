@@ -1,5 +1,5 @@
 {
     "solidity.defaultCompiler": "remote",
     "solidity.compileUsingLocalVersion": "/Users/ctsinon/Projects/BlockChain/ethernaut/soljson-v0.5.0+commit.1d4f565a.js",
-    "solidity.compileUsingRemoteVersion": "v0.5.0+commit.1d4f565a"
+    "solidity.compileUsingRemoteVersion": "v0.8.0+commit.c7dfd78e"
 }
