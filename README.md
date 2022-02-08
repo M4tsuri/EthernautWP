@@ -26,6 +26,7 @@
 - [x] 18. [MagicNumber](./18-magicnumber)
 - [x] 19. [Alien Codex](./19-aliencodex)
 - [x] 20. [Denial](./20-denial)
+- [ ] 21. [Shop](./21-shop)
 
 ### 捐赠
 
