@@ -37,7 +37,9 @@
     "20-denial/contracts",
     "20-denial/play",
     "21-shop/contracts",
-    "21-shop/play"
+    "21-shop/play",
+    "22-dex/contracts",
+    "22-dex/play"
   ],
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
