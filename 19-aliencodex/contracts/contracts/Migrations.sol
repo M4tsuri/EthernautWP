@@ -9,7 +9,7 @@ contract Migrations {
     if (msg.sender == owner) _;
   }
 
-  constructor() {
+  constructor() public {
     owner = msg.sender;
   }
 
