@@ -27,7 +27,8 @@
 - [x] 19. [Alien Codex](./19-aliencodex)
 - [x] 20. [Denial](./20-denial)
 - [x] 21. [Shop](./21-shop)
-- [ ] 22. [Dex](./22-dex)
+- [x] 22. [Dex](./22-dex)
+- [ ] 23. [Dex Two](./23-dex2)
 
 ### 捐赠
 
