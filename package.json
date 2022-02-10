@@ -41,7 +41,11 @@
     "22-dex/contracts",
     "22-dex/play",
     "23-dex2/contracts",
-    "23-dex2/play"
+    "23-dex2/play",
+    "24-puzzle-wallet/contracts",
+    "24-puzzle-wallet/play",
+    "25-motorbike/contracts",
+    "25-motorbike/play"
   ],
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",

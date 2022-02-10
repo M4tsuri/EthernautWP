@@ -29,6 +29,8 @@
 - [x] 21. [Shop](./21-shop)
 - [x] 22. [Dex](./22-dex)
 - [ ] 23. [Dex Two](./23-dex2)
+- [ ] 24. [Puzzle Wallet](./24-puzzle-wallet)
+- [ ] 25. [Motorbike](./25-motorbike)
 
 ### 捐赠
 
