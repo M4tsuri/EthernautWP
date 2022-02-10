@@ -1,11 +1,11 @@
 {
-  "name": "25-motorbike_contracts",
-  "private": true,
-  "version": "0.0.1",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "postinstall": "truffle compile",
-    "migrate": "truffle migrate"
-  }
+    "name": "25-motorbike",
+    "private": true,
+    "version": "0.0.1",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "postinstall": "truffle compile",
+        "migrate": "truffle migrate"
+    }
 }
