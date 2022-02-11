@@ -4,6 +4,7 @@
 
 当WP中提到黄皮书时，黄皮书版本为`BERLIN VERSION fabef25 – 2021-12-02`
 
+**如果我的WP帮到了你，不妨请我喝一杯咖啡 `m4tsuri.eth (0x8F28dA6FF26E782cB0495E581fADbCEC320A4769)` :)**
 ### 完成列表
 
 - [x] 0. [Hello](./0-hello)
@@ -32,7 +33,3 @@
 - [x] 23. [Dex Two](./23-dex2)
 - [x] 24. [Puzzle Wallet](./24-puzzle-wallet)
 - [x] 25. [Motorbike](./25-motorbike)
-
-### 捐赠
-
-**如果我的WP帮到了你，不妨请我喝一杯咖啡 `m4tsuri.eth (0x8F28dA6FF26E782cB0495E581fADbCEC320A4769)` :)**
