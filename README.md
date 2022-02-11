@@ -1,6 +1,7 @@
 ## Ethernaut WriteUp
 
-一些Ethernaut题目WP，持续更新。
+一些Ethernaut题目WP，截止2022.2.11前的所有题目wp已全部完成。
+
 当WP中提到黄皮书时，黄皮书版本为`BERLIN VERSION fabef25 – 2021-12-02`
 
 ### 完成列表
@@ -30,7 +31,7 @@
 - [x] 22. [Dex](./22-dex)
 - [x] 23. [Dex Two](./23-dex2)
 - [x] 24. [Puzzle Wallet](./24-puzzle-wallet)
-- [ ] 25. [Motorbike](./25-motorbike)
+- [x] 25. [Motorbike](./25-motorbike)
 
 ### 捐赠
 

